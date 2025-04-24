@@ -5,6 +5,7 @@ __pycache__/
 
 # Virtual environments (falls du sie doch mal im Projekt hättest)
 venv/
+.venv/
 .env/
 env/
 
