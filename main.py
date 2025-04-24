@@ -6,7 +6,6 @@ NUM_EPISODES = 100
 DISPLAY_EVERY = 10
 MAX_STEPS = 500
 
-
 def run_random_rollout(env, max_steps=MAX_STEPS):
     obs, _ = env.reset()
     total_reward = 0.0
@@ -22,7 +21,6 @@ def run_random_rollout(env, max_steps=MAX_STEPS):
         print(f" Maximale Schritte erreicht, Reward={total_reward:.2f}")
     time.sleep(0.5)
 
-
 def main():
     env = SimpleRaceEnv(render_mode='human')
     for ep in range(1, NUM_EPISODES+1):
@@ -30,7 +28,6 @@ def main():
             print(f"=== Episode {ep} ===")
             run_random_rollout(env)
         else:
-            # Schnelle Simulation ohne Rendering
             obs, _ = env.reset()
             done = False
             while not done:
